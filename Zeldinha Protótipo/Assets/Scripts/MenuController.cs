@@ -12,14 +12,14 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(game);
     }
 
-    public void OpenCreditsBTN()
+    public void Credits()
     {
-        creditsPainel.SetActive(true);
+        SceneManager.LoadScene("Creditos");
     }
 
-    public void CloseCreditsBTN()
+    public void Menu()
     {
-        creditsPainel.SetActive(false);
+        SceneManager.LoadScene("Menu");
     }
 
     public void QuitBTN()
