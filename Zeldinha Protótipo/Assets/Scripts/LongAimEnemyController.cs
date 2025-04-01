@@ -6,8 +6,8 @@ public class LongAimEnemyController : MonoBehaviour
 {
     [SerializeField] Transform arrowPoint;
     [SerializeField] GameObject arrowPrefab;
-    [SerializeField] float fireTimeRate;
-
+    [SerializeField] float fireTimeRate, arrowSpeed;
+    
     private float nextArrow;
 
     public float life;
@@ -31,6 +31,5 @@ public class LongAimEnemyController : MonoBehaviour
     void Fire()
     {
         Instantiate(arrowPrefab, arrowPoint.position, arrowPoint.rotation);
-        Destroy(gameObject);
     }
 }

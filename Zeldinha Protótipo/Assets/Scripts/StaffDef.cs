@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ChangeWeapon
+
+public class StaffDef : MonoBehaviour
 {
-    Sword, Staff
-}
-public class StaffAtackScript : MonoBehaviour
-{
+    [SerializeField] GameObject invokeBarier;
+    [SerializeField] float timerBarier;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timerBarier--;
     }
 
     // Update is called once per frame
@@ -19,4 +18,9 @@ public class StaffAtackScript : MonoBehaviour
     {
         
     }
+
+        public void InvokeBarier()
+        {
+        
+        }
 }

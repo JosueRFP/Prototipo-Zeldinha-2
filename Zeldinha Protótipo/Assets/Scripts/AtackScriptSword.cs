@@ -5,12 +5,12 @@ using UnityEngine;
 public class AtackScriptSword : MonoBehaviour
 {
    [SerializeField] Transform effectController;
-   [SerializeField] GameObject atackEfect1;
-   
+   [SerializeField] GameObject atackEfect1, enemy;
+      
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(EfectControllerTimer()); 
+       
     }
 
     // Update is called once per frame
@@ -34,15 +34,10 @@ public class AtackScriptSword : MonoBehaviour
             if (col.gameObject)
             {
                 InstatiateEffect();
-                EfectControllerTimer();
-                
             }
         }
         
     }
 
-    IEnumerator EfectControllerTimer()
-    {
-        yield return new WaitForSeconds(3);
-    }
+   
 }
