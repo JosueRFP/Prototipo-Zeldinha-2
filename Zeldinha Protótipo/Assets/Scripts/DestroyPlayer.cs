@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class DestroyPlayer : MonoBehaviour
 {
@@ -24,8 +25,7 @@ public class DestroyPlayer : MonoBehaviour
         if (collision.gameObject)
         {
             Destroy(collision.gameObject);
-            OnRestart.Invoke();
-            print("Prescione R para reiniciar");
+            OnRestart.Invoke();            
         }
     }
 }

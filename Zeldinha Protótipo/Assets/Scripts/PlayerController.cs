@@ -72,9 +72,13 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+        int enemyLayer = LayerMask.GetMask("Enemy");
+        
         if (other.gameObject)
         {
             Destroy(other.gameObject);
         }
+        
+        
     }
 }
