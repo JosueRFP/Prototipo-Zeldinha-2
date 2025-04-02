@@ -5,7 +5,6 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public float speed;
-    [SerializeField]float damege = 2;
     [SerializeField] Vector2 distance;
 
     // Start is called before the first frame update

@@ -5,8 +5,11 @@ using UnityEngine;
 public class AtackScriptSword : MonoBehaviour
 {
    [SerializeField] Transform effectController;
-   [SerializeField] GameObject atackEfect1, enemy;
-      
+   [SerializeField] GameObject atackEfect1;
+   
+
+    bool facingRight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,16 @@ public class AtackScriptSword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        bool facingRight = effectController.localScale.x < 0;
+        if (facingRight)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+        else
+        
         CollisionOnEnemys();
+        
     }
 
     
