@@ -283,6 +283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2121202310}
+--- !u!4 &610424406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+  m_PrefabInstance: {fileID: 936623755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &668710038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -527,6 +532,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5733946235660094324, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
   m_PrefabInstance: {fileID: 1896937947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &936623755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2121202310}
+    m_Modifications:
+    - target: {fileID: 3878195047518727318, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_Name
+      value: Espada do Zeldinha 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622239420698188675, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: effectController
+      value: 
+      objectReference: {fileID: 163832154}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27520925
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
 --- !u!4 &1036499513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5733946235660094324, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
@@ -7005,6 +7071,7 @@ Transform:
   m_Children:
   - {fileID: 163832154}
   - {fileID: 309257285}
+  - {fileID: 610424406}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7020,7 +7087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6129c2e783ed244cbe5caea33e35b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  check: {fileID: 0}
+  weaponPos: {fileID: 0}
   changeWeapon: 0
   layerMask:
     serializedVersion: 2
@@ -7034,8 +7101,6 @@ MonoBehaviour:
   swordLocal: 0
   facingRight: 0
   spriteRenderer: {fileID: 2121202309}
-  staffPref: {fileID: 6471555144907685769, guid: 3baeb30a03ab25b4eb94d78dfcd34ba5, type: 3}
-  swordPrefab: {fileID: 3878195047518727318, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
 --- !u!61 &2121202312
 BoxCollider2D:
   m_ObjectHideFlags: 0

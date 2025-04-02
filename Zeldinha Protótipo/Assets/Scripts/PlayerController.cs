@@ -16,13 +16,13 @@ public class PlayerController : MonoBehaviour
 {   
     Rigidbody2D rb;
 
-    [SerializeField] Transform weaponPos;
     [SerializeField] ChangeWeapon changeWeapon;
     [SerializeField] LayerMask layerMask;
     [SerializeField] float vertical, speed, horizontal, life, maxLife, damege;
     [SerializeField] bool swordLocal,facingRight;
     [SerializeField] SpriteRenderer spriteRenderer;
 
+   
     public float Speed { get => speed; }
        
     // Start is called before the first frame update
@@ -76,11 +76,11 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         int enemyLayer = LayerMask.GetMask("Enemy");
-        
-        if (col.gameObject.GetComponent<LongAimEnemyController>() && GetComponent<NearEnemy>())
+        if(col.gameObject.activeSelf)
         {
-            Destroy(col.gameObject);
-        }       
+
+        }
+           
     }
 
     
