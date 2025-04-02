@@ -7,9 +7,9 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] GameObject creditsPainel;
 
-    public void Teleport(string game)
+    public void Teleport()
     {
-        SceneManager.LoadScene(game);
+        SceneManager.LoadScene("game");
     }
 
     public void Credits()
