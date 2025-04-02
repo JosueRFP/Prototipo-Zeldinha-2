@@ -43,11 +43,11 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonUp("Fire2"))
+        if (Input.GetKeyUp(KeyCode.E))
         {
             ChangeWeaponMode(ChangeWeapon.Sword);
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             ChangeWeaponMode(ChangeWeapon.Staff);
         }
@@ -70,8 +70,11 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        //if(collision.gameObject)
+        if (other.gameObject)
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
