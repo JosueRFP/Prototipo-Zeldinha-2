@@ -4,24 +4,16 @@ using UnityEngine;
 
 public class DestroyableObjects1 : MonoBehaviour, IDamegable
 {
-    
+    IDamegable damegable;
+
     public void DestroyGameObj()
     {
-        Collider2D collider = GetComponent<Collider2D>();
-        Destroy(collider.gameObject);
+        Collider2D col = GetComponent<Collider2D>();
+        if(col.gameObject)
+        {
+            Destroy(col.gameObject) ;
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    
 }

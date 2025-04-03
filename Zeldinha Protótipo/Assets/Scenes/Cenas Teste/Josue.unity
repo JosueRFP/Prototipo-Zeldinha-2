@@ -192,16 +192,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3be34bba3d9fe424f83c490bc54084d2, type: 3}
---- !u!4 &404564725 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2241567788250889435, guid: 3be34bba3d9fe424f83c490bc54084d2, type: 3}
-  m_PrefabInstance: {fileID: 404564724}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &404564726 stripped
+--- !u!1 &404564726
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 8500372334896242509, guid: 3be34bba3d9fe424f83c490bc54084d2, type: 3}
   m_PrefabInstance: {fileID: 404564724}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404564728}
+  - component: {fileID: 404564727}
+  m_Layer: 0
+  m_Name: 
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!114 &404564727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +223,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectController: {fileID: 1431556720}
   atackEfect1: {fileID: 4072524331481949951, guid: c8f989e48eeecc143a4a26ac917bd00b, type: 3}
+--- !u!4 &404564728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404564726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453748790
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +368,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPoint: {fileID: 0}
   arrowPrefab: {fileID: 0}
+  swordCollider: {fileID: 0}
   fireTimeRate: 0
+  arrowSpeed: 0
   life: 0
   damege: 0
 --- !u!1 &557627712
@@ -381,14 +405,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6129c2e783ed244cbe5caea33e35b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  sword: {fileID: 0}
+  staff: {fileID: 0}
+  changeWeapon: 0
   vertical: 0
+  speed: 5
   horizontal: 0
   life: 0
   maxLife: 0
-  speed: 5
-  facingRight: 0
-  spriteRenderer: {fileID: 0}
+  damege: 0
+  spriteRenderer: {fileID: 557627716}
 --- !u!61 &557627714
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -500,7 +526,6 @@ Transform:
   m_LocalScale: {x: 3.2543, y: 3.3722, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 404564725}
   - {fileID: 1431556720}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -632,5 +657,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 557627717}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
