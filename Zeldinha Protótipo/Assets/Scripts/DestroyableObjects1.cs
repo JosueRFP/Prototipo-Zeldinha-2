@@ -7,7 +7,8 @@ public class DestroyableObjects1 : MonoBehaviour, IDamegable
     
     public void DestroyGameObj()
     {
-        Destroy(gameObject);
+        Collider2D collider = GetComponent<Collider2D>();
+        Destroy(collider.gameObject);
     }
 
     // Start is called before the first frame update
