@@ -5,7 +5,7 @@ using UnityEngine;
 public class LongAimEnemyController : MonoBehaviour
 {
     [SerializeField] Transform arrowPoint;
-    [SerializeField] GameObject arrowPrefab;
+    [SerializeField] GameObject arrowPrefab, swordCollider;
     [SerializeField] float fireTimeRate, arrowSpeed;
     
     private float nextArrow;
@@ -32,4 +32,6 @@ public class LongAimEnemyController : MonoBehaviour
     {
         Instantiate(arrowPrefab, arrowPoint.position, arrowPoint.rotation);
     }
+
+   
 }

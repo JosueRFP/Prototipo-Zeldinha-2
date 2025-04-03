@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum ChangeWeapon
 {
@@ -11,20 +13,16 @@ public enum ChangeWeapon
 [RequireComponent(typeof(BoxCollider2D))]
 
 public class PlayerController : MonoBehaviour
-{
-   
-    public Animator animator;
-
+{   
     Rigidbody2D rb;
 
-    [SerializeField] Transform check;
-    [SerializeField] bool isColliding;
     [SerializeField] ChangeWeapon changeWeapon;
     [SerializeField] LayerMask layerMask;
     [SerializeField] float vertical, speed, horizontal, life, maxLife, damege;
     [SerializeField] bool swordLocal,facingRight;
     [SerializeField] SpriteRenderer spriteRenderer;
 
+   
     public float Speed { get => speed; }
        
     // Start is called before the first frame update
@@ -33,7 +31,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         maxLife = life;
         rb = GetComponent<Rigidbody2D>();
-        check = GetComponentInChildren<Transform>();
+        
     }
 
     // Update is called once per frame
@@ -43,7 +41,11 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Game");
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeWeaponMode(ChangeWeapon.Sword);
         }
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             ChangeWeaponMode(ChangeWeapon.Staff);
         }
+        
     }
 
     private void FixedUpdate()
@@ -70,15 +73,15 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         int enemyLayer = LayerMask.GetMask("Enemy");
-        
-        if (other.gameObject)
+        if(col.gameObject.activeSelf)
         {
-            Destroy(other.gameObject);
+
         }
-        
-        
+           
     }
+
+    
 }
