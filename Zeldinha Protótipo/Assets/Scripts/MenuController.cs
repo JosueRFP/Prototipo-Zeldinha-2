@@ -28,4 +28,8 @@ public class MenuController : MonoBehaviour
         print("Quit");
     }
     
+    public void Controller()
+    {
+        SceneManager.LoadScene("Controller");
+    }
 }
