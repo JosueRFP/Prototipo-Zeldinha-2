@@ -553,6 +553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Espada do Zeldinha 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3878195047518727318, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4622239420698188675, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
       propertyPath: effectController
       value: 
@@ -7222,7 +7226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sword: {fileID: 559527337}
   staff: {fileID: 6471555144907685769, guid: 3baeb30a03ab25b4eb94d78dfcd34ba5, type: 3}
-  changeWeapon: 0
+  changeWeapon: 1
   vertical: 0
   speed: 5
   horizontal: 0
