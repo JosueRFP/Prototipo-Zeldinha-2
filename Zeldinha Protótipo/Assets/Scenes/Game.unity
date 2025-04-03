@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2121202310}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &309257284
 GameObject:
@@ -283,6 +283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2121202310}
+--- !u!1 &559527337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3878195047518727318, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
+  m_PrefabInstance: {fileID: 936623755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &610424406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
@@ -351,7 +356,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inimigo Perto  (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5733946235660094283, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
 --- !u!1 &688770039
 GameObject:
@@ -409,7 +415,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.803}
 --- !u!1 &747400406
 GameObject:
@@ -467,7 +473,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.803}
 --- !u!1 &788683868
 GameObject:
@@ -525,7 +531,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &896834925 stripped
 Transform:
@@ -549,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 163832154}
     - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6863160676372893440, guid: e24aa803441c4564780b1890f222b5b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -634,34 +640,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSwordMode:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnStaffMode:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1134063926
 Transform:
   m_ObjectHideFlags: 0
@@ -675,7 +657,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1272236402 stripped
 Transform:
@@ -783,7 +765,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1506077369
 PrefabInstance:
@@ -848,7 +830,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Inimigo Perto '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5733946235660094283, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
 --- !u!1001 &1706579741
 PrefabInstance:
@@ -1043,7 +1026,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inimigo Perto  (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5733946235660094283, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8d239186df5a64a44b8c8015a9cdd2e2, type: 3}
 --- !u!1 &1908753365
 GameObject:
@@ -6962,7 +6946,7 @@ Transform:
   - {fileID: 1989240413}
   - {fileID: 896834925}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2121202307
 GameObject:
@@ -7069,9 +7053,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 163832154}
-  - {fileID: 309257285}
   - {fileID: 610424406}
+  - {fileID: 309257285}
+  - {fileID: 163832154}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7087,7 +7071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6129c2e783ed244cbe5caea33e35b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPos: {fileID: 0}
+  sword: {fileID: 559527337}
+  staff: {fileID: 6471555144907685769, guid: 3baeb30a03ab25b4eb94d78dfcd34ba5, type: 3}
   changeWeapon: 0
   layerMask:
     serializedVersion: 2

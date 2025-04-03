@@ -18,7 +18,17 @@ public class Arrow : MonoBehaviour
     {
         transform.position += (Vector3)distance * speed;
         Destroy(gameObject, 1.2f);
+       
     }
 
+    void ColOn()
+    {
+        Collider2D col = GetComponent<Collider2D>();
+
+        if (col.gameObject.layer.Equals("Player"))
+        {
+            Destroy(col.gameObject);
+        }
+    }
     
 }

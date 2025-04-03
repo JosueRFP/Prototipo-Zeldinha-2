@@ -16,13 +16,12 @@ public class PlayerController : MonoBehaviour
 {   
     Rigidbody2D rb;
 
+    public GameObject sword, staff;
     [SerializeField] ChangeWeapon changeWeapon;
-    [SerializeField] LayerMask layerMask;
     [SerializeField] float vertical, speed, horizontal, life, maxLife, damege;
-    [SerializeField] bool swordLocal,facingRight;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-   
+    IDamegable target;
     public float Speed { get => speed; }
        
     // Start is called before the first frame update
@@ -31,7 +30,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         maxLife = life;
         rb = GetComponent<Rigidbody2D>();
-        
+        ChangeWeaponMode(ChangeWeapon.Sword);
     }
 
     // Update is called once per frame
@@ -48,10 +47,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeWeaponMode(ChangeWeapon.Sword);
+            Instantiate(sword);
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             ChangeWeaponMode(ChangeWeapon.Staff);
+            Instantiate(staff);
         }
         
     }
@@ -73,15 +74,5 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        int enemyLayer = LayerMask.GetMask("Enemy");
-        if(col.gameObject.activeSelf)
-        {
-
-        }
-           
-    }
-
-    
+        
 }

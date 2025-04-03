@@ -6,6 +6,8 @@ public class AtackScriptSword : MonoBehaviour
 {
    [SerializeField] Transform effectController;
    [SerializeField] GameObject atackEfect1;
+   IDamegable target;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,15 @@ public class AtackScriptSword : MonoBehaviour
         }
         
     }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        int enemyLayer = LayerMask.GetMask("Enemy");
+        if (col.gameObject.activeSelf)
+        {
+            Destroy(col.gameObject);
+        }
 
-   
+    }
+
+    
 }

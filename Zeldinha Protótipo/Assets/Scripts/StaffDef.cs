@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class StaffDef : MonoBehaviour
 {
-    public GameObject Staff;
     [SerializeField] GameObject invokeBarier;
     [SerializeField] float timerBarier;
     // Start is called before the first frame update
@@ -20,11 +19,11 @@ public class StaffDef : MonoBehaviour
         
     }
 
-        public void InvokeBarier()
-        {
-            if(timerBarier == 0)
-        {
-            Destroy(invokeBarier);
-        }
-        }
+  public void InvokeBarier()
+  {
+      if(timerBarier == 0)
+      {
+         Destroy(invokeBarier);
+      }
+  }
 }
