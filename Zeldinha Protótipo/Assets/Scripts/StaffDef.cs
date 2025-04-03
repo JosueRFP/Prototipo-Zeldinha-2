@@ -11,7 +11,7 @@ public class StaffDef : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timerBarier--;
+        
     }
 
     // Update is called once per frame

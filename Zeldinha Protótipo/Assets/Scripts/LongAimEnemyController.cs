@@ -13,7 +13,9 @@ public class LongAimEnemyController : MonoBehaviour
     public float life;
     public float damege;
 
-    IDamegable damegable;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +37,5 @@ public class LongAimEnemyController : MonoBehaviour
         Instantiate(arrowPrefab, arrowPoint.position, arrowPoint.rotation);
     }
 
-   
+    
 }

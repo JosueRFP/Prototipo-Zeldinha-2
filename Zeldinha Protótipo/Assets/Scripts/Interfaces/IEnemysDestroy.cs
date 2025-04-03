@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDamegable 
+public interface IEnemysDestroy 
 {
-    public void DestroyGameObj()
-    {
-
-    }
+    public void DestroyGameObj();
+    
 }

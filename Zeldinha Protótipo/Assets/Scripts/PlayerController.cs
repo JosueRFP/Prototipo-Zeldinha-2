@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float vertical, speed, horizontal, life, maxLife, damege;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    IDamegable target;
+    IEnemysDestroy enemysDestroy;
     public float Speed { get => speed; }
        
     // Start is called before the first frame update
@@ -74,5 +74,11 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
-        
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject)
+        {
+
+        }
+    }
 }
