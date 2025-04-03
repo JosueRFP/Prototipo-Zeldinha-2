@@ -6,7 +6,7 @@ using UnityEngine;
 public class StaffDef : MonoBehaviour
 {
     [SerializeField] Transform invoker; 
-    [SerializeField] GameObject invokeBarier;
+    [SerializeField] GameObject barier;
     [SerializeField] float timerBarier;
     // Start is called before the first frame update
     void Start()
@@ -24,12 +24,17 @@ public class StaffDef : MonoBehaviour
   {
        if (Input.GetButtonDown("Fire1"))
        {
-           Instantiate(invokeBarier);
+           Instantiate(barier);
+           TimerBarrier();
        }
 
-      if (timerBarier == 0)
-      {
-         Destroy(invokeBarier);
-      }
+      
   }
+    void TimerBarrier()
+    {
+        if (timerBarier == 0)
+        {
+            Destroy(barier);
+        }
+    }
 }
