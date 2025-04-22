@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxLife = life;
         spriteRenderer = GetComponent<SpriteRenderer>();
         maxLife = life;
         rb = GetComponent<Rigidbody2D>();
@@ -36,14 +37,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        damege -= maxLife;
+        life -= damege;
+
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("Game");
-        }
+       
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangeWeaponMode(ChangeWeapon.Sword);
@@ -54,7 +53,6 @@ public class PlayerController : MonoBehaviour
             ChangeWeaponMode(ChangeWeapon.Staff);
             Instantiate(staff);
         }
-        
     }
 
     private void FixedUpdate()
@@ -74,11 +72,15 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject)
-        {
-
-        }
+        if (collision.gameObject.layer.Equals("Personas"))
+        life--;
+            if (life <= 0)
+            {
+                Destroy(gameObject);
+            }
     }
+
 }

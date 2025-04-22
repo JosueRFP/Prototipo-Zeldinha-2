@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IEnemysDestroy 
 {
-    public void DestroyGameObj();
+    public void TakeDamege(int amount);
     
 }

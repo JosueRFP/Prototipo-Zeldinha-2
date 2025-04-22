@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LongAimEnemyController : MonoBehaviour
+public class LongAimEnemyController : MonoBehaviour, IEnemysDestroy
 {
+    public float health = 5f;
     [SerializeField] Transform arrowPoint;
     [SerializeField] GameObject arrowPrefab, swordCollider;
     [SerializeField] float fireTimeRate, arrowSpeed;
@@ -14,13 +15,14 @@ public class LongAimEnemyController : MonoBehaviour
     public float damege;
 
 
-    
-
-    // Start is called before the first frame update
-    void Start()
+    public void TakeDamege(int amount)
     {
-        life = 5f;
-    }
+        health -= amount;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    } 
 
     // Update is called once per frame
     void Update()
@@ -37,5 +39,14 @@ public class LongAimEnemyController : MonoBehaviour
         Instantiate(arrowPrefab, arrowPoint.position, arrowPoint.rotation);
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer.Equals("Personas"))
+            life--;
+        if (life <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
